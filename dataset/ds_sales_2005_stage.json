@@ -1,0 +1,33 @@
+{
+	"name": "ds_sales_2005_stage",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_Azure_Stage",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"p_inputFileName": {
+				"type": "string",
+				"defaultValue": "Sales_Dec_2004.csv"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().p_inputFileName",
+					"type": "Expression"
+				},
+				"container": "stage"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

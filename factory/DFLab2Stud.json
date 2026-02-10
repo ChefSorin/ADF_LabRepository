@@ -1,0 +1,9 @@
+{
+	"name": "DFLab2Stud",
+	"location": "westus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "af47de85-0d9a-4ce2-9afa-48169cfcb9e1",
+		"tenantId": "a48e65e8-8fd4-435f-9b6b-2d6e8aa54ec5"
+	}
+}

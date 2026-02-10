@@ -1,0 +1,66 @@
+{
+	"name": "ds_employee_raw",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_raw_blab",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "Employee.csv",
+				"folderPath": "module 6",
+				"container": "raw"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Employee_id",
+				"type": "String"
+			},
+			{
+				"name": "store_id",
+				"type": "String"
+			},
+			{
+				"name": "department_id",
+				"type": "String"
+			},
+			{
+				"name": "firstname",
+				"type": "String"
+			},
+			{
+				"name": "lastname",
+				"type": "String"
+			},
+			{
+				"name": "Country",
+				"type": "String"
+			},
+			{
+				"name": "age",
+				"type": "String"
+			},
+			{
+				"name": "gender",
+				"type": "String"
+			},
+			{
+				"name": "email",
+				"type": "String"
+			},
+			{
+				"name": "phone",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
